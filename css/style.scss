@@ -1,0 +1,367 @@
+@import "color.scss";
+
+// navbar
+html {
+    font-family: 'Recursive', sans-serif;
+}
+
+// buttons 
+
+.btn-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    margin: 1rem 0;
+
+    .btn-mian {
+        color: $main-color;
+        border: solid 2px $main-color;
+        font-weight: 500;
+        font-size: 1.5rem;
+        padding: 5px 30px;
+    }
+
+    .btn-mian::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all 500ms;
+        background-color: $main-color;
+    }
+
+    .btn-mian:hover {
+        color: $light;
+    }
+
+    .btn-mian:hover::before {
+        left: 0;
+    }
+}
+
+body {
+    background-color: $light;
+
+    nav {
+        background-color: $light;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+
+        .wrapper {
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                svg {
+                    width: 10%;
+                    fill: $main-color;
+                    margin: 0 .5rem 0 0;
+                }
+
+                h2 {
+                    span {
+                        color: $main-color;
+                        padding: 0px;
+                        margin: 0px;
+                    }
+                }
+
+            }
+
+            .nav-list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 50%;
+                height: 100%;
+                margin-bottom: 0px;
+
+                .nav-itmes {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 25%;
+
+                    a {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                        color: black;
+                        margin-top: 10px;
+                    }
+
+                }
+
+                .nav-itmes:hover a {
+                    color: $main-color;
+
+                }
+
+            }
+
+            .humberger {
+                display: none;
+                cursor: pointer;
+
+                .line {
+                    width: 30px;
+                    height: 5px;
+                    background-color: #333;
+                    margin: 3px 0;
+                    border-radius: 50px;
+                }
+
+                .line:nth-child(2) {
+                    width: 25px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    #home {
+        .container {
+
+            .row {
+                height: 90vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .col-md-6 {
+                    span {
+                        font-size: 1.5rem;
+                        color: $secondery-text;
+                        margin: 1rem 0;
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                        padding: 0px;
+                        margin: 1rem 0;
+                    }
+
+                    p {
+                        font-size: 2rem;
+                        color: $light-p;
+                        font-weight: 600;
+                        margin: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        min-height: 100vh;
+        background-color: #fff;
+        .container {
+
+            text-align: center;
+
+            h3 {
+                font-size: 3rem;
+                font-weight: 600;
+                display: inline-block;
+                margin: 1rem auto;
+                position: relative;
+                z-index: 3;
+            }
+
+            h3::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 10px;
+                background: $main-color;
+                bottom: -10%;
+                left: 0;
+                z-index: 2;
+            }
+
+            .row {
+                .col-md-12 {
+                    .project {
+                        height: 400px;
+                        width: 90%;
+                        margin: 1rem auto;
+                        box-shadow: 4px 4px 20px $shadow,
+                            -4px -4px 20px $shadow;
+                        border-radius: 20px;
+
+                        .col-md-5 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .project-img {
+                                height: 80%;
+                                width: 80%;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .col-md-7 {
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .project-deatails {
+                                width: 80%;
+                                height: 80%;
+                                display: flex;
+                                flex-direction: column;
+
+                                h2 {
+                                    margin: 1rem 0;
+                                }
+
+                                p {
+                                    color: $light-p;
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    margin: 1rem 0;
+                                }
+
+                                .btn-wraper {
+                                    margin: 1rem 0;
+
+                                    .btn-details {
+                                        font-size: 1rem;
+                                        font-weight: 600;
+                                        color: $dark;
+                                        border: solid 2px $dark;
+                                        border-radius: 100px;
+                                        padding: 5px 25px;
+                                        transition: all 500ms;
+                                    }
+
+                                    .btn-details:hover {
+                                        background-color: $dark;
+                                        color: $light;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col-md-12:nth-child(even) .project .col-md-5 {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    #skills{
+        min-height: 100vh;
+    }
+}
+
+// responsive Behavir
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 12px;
+        body {
+            // navbar
+
+            nav {
+                .nav-list {
+                    position: fixed;
+                    top: 10vh;
+                    right: -150%;
+                    display: flex;
+                    justify-content: center !important;
+                    flex-direction: column;
+                    transition: all 500ms;
+                    width: 100vw !important;
+                    background-color: #fff;
+
+                    .nav-itmes {
+                        height: min-content !important;
+                        margin: 1rem auto;
+
+                        a {
+                            font-size: 2rem !important;
+                        }
+                    }
+
+                }
+
+                // show the navbar items
+                .nav-list.activ-m {
+                    transition: all 500ms;
+                    right: 0;
+                }
+
+            }
+
+            .humberger {
+                display: block !important;
+            }
+
+            .humberger.activ-h {
+                .line-one {
+                    transform: rotate(45deg) translateX(20%);
+                    transition: all 500ms;
+                }
+
+                .line-two {
+                    display: none;
+                }
+
+                .line-three {
+                    transform: rotate(-45deg) translateX(20%);
+                    transition: all 500ms;
+                }
+            }
+
+            #home {
+                .container {
+                    .row {
+                        .col-md-6 {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            #projects {
+                .container {
+                    .row {
+                        .col-md-12 {
+                            .project {
+                                height: auto;
+                                overflow: hidden;
+                                padding-bottom: 5rem;
+                            }
+                        }
+                        .col-md-12:nth-child(even) .project .col-md-5 {
+                            order: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
