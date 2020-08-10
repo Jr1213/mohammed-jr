@@ -300,8 +300,65 @@ body #projects .container .row .col-md-12:nth-child(even) .project .col-md-5 {
           order: 2;
 }
 
-body #skills {
-  min-height: 100vh;
+body #skills .container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #skills .container h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 3;
+  margin: 2rem 0;
+}
+
+body #skills .container h3::before {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 10px;
+  background: #6475DE;
+  bottom: -10%;
+  left: 0;
+  -webkit-transform: translateX(450%);
+          transform: translateX(450%);
+  z-index: 2;
+}
+
+body #skills .container .row .col-md-4 {
+  text-align: left;
+}
+
+body #skills .container .row .col-md-4 ul {
+  list-style: none;
+  padding: 0;
+}
+
+body #skills .container .row .col-md-4 ul .skill {
+  position: relative;
+  padding: .5rem 0 1rem 0;
+}
+
+body #skills .container .row .col-md-4 ul .skill .icon {
+  width: 20%;
+  display: inline-block;
+}
+
+body #skills .container .row .col-md-4 ul .skill h2 {
+  display: inline-block;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -371,6 +428,11 @@ body #skills {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+  }
+  html body #skills .container h3::before {
+    width: 20%;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
   }
 }
 /*# sourceMappingURL=style.css.map */
