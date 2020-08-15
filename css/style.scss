@@ -333,25 +333,42 @@ body {
         background-color: #fff;
 
         .row {
-            padding: 2rem 0;
-            .col-md-6:nth-child(1) {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                .btn-wraper {
+
+            // padding: 2rem 0;
+            .col-md-5 {
+                h3 {
+                    padding: 2rem 0;
+                }
+
+                overflow: hidden;
+
+                .contact {
+                    padding-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 3px solid $main-color;
+                    .contact-item {
+                        text-align: center;
+
+                        img {
+                            width: 10%;
+                            padding: .5rem 0;
+                        }
+                    }
+                    .contact-item:nth-child(2){
+                        img{
+                            width: 20%;
+                        }
+                    }
+                }
+                .social{
+                    margin: 2rem 0; 
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    
-                    height: 50%;
-                    .btn-contact {
-                        margin: 1rem 0;
-                        font-size: 1.2rem;
-                        border-radius: 15px;
-                        img {
-                            margin: auto;
-                            width: 80%;
-                        }
+                    img{
+                        width:50%;
                     }
                 }
             }

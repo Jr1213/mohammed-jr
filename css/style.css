@@ -359,11 +359,16 @@ body #contacts {
   background-color: #fff;
 }
 
-body #contacts .row {
+body #contacts .row .col-md-5 {
+  overflow: hidden;
+}
+
+body #contacts .row .col-md-5 h3 {
   padding: 2rem 0;
 }
 
-body #contacts .row .col-md-6:nth-child(1) {
+body #contacts .row .col-md-5 .contact {
+  padding-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,30 +379,37 @@ body #contacts .row .col-md-6:nth-child(1) {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid #6475DE;
 }
 
-body #contacts .row .col-md-6:nth-child(1) .btn-wraper {
+body #contacts .row .col-md-5 .contact .contact-item {
+  text-align: center;
+}
+
+body #contacts .row .col-md-5 .contact .contact-item img {
+  width: 10%;
+  padding: .5rem 0;
+}
+
+body #contacts .row .col-md-5 .contact .contact-item:nth-child(2) img {
+  width: 20%;
+}
+
+body #contacts .row .col-md-5 .social {
+  margin: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50%;
 }
 
-body #contacts .row .col-md-6:nth-child(1) .btn-wraper .btn-contact {
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  border-radius: 15px;
-}
-
-body #contacts .row .col-md-6:nth-child(1) .btn-wraper .btn-contact img {
-  margin: auto;
-  width: 80%;
+body #contacts .row .col-md-5 .social img {
+  width: 50%;
 }
 
 body footer {
